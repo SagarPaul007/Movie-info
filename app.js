@@ -10,7 +10,7 @@ function myFunction(event) {
 function search() {
     const searchText = document.getElementById('search-text').value;
     
-    axios.get(`http://www.omdbapi.com/?apikey=${API_KEY}&s=${searchText}`)
+    axios.get(`https://www.omdbapi.com/?apikey=${API_KEY}&s=${searchText}`)
         .then((response) => {
             var movies = response.data.Search;
             console.log(movies)
@@ -42,7 +42,7 @@ function movieSelected(id) {
 
 function getMovie(){
     var movieId = sessionStorage.getItem("movieId");
-    axios.get(`http://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}`)
+    axios.get(`https://www.omdbapi.com/?apikey=${API_KEY}&i=${movieId}`)
         .then((response) => {
             var movie = response.data;
             var output ="";
